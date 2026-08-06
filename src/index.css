@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: auto;
+    background-color: #ffffff;
+  }
+
+  body {
+    font-family: 'Inter', 'Montserrat', system-ui, sans-serif;
+    background-color: #ffffff;
+    color: #0b2d5b;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: rgba(46, 139, 87, 0.25);
+    color: #0b2d5b;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #f8f9fa; }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #2e8b57, #0b2d5b);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #0b2d5b, #2e8b57);
+  }
+}
+
+@layer components {
+  /* Layout */
+  .container-wide   { @apply mx-auto max-w-7xl px-5 sm:px-8 lg:px-12; }
+  .container-narrow { @apply mx-auto max-w-4xl  px-5 sm:px-8 lg:px-12; }
+  .section-padding  { @apply py-20 md:py-28 lg:py-32; }
+
+  /* Glass effects */
+  .glass-white {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.9);
+  }
+  .glass-navy {
+    background: rgba(11,45,91,0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(46,139,87,0.2);
+  }
+  .glass-emerald {
+    background: rgba(46,139,87,0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(46,139,87,0.2);
+  }
+
+  /* Cards */
+  .card-white {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 1rem;
+  }
+  .card-navy {
+    background: linear-gradient(135deg, #0b2d5b 0%, #091f44 100%);
+    border: 1px solid rgba(46,139,87,0.2);
+    border-radius: 1rem;
+  }
+  .card-emerald {
+    background: linear-gradient(135deg, #edf9f2 0%, #d0f0df 100%);
+    border: 1px solid #a1e0bf;
+    border-radius: 1rem;
+  }
+
+  /* Text gradients */
+  .text-gradient-navy {
+    background: linear-gradient(135deg, #0b2d5b 0%, #1a3d7a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-green {
+    background: linear-gradient(135deg, #1a5e37 0%, #2e8b57 50%, #3dba7d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-dual {
+    background: linear-gradient(135deg, #0b2d5b 0%, #2e8b57 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full bg-navy-700 px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-navy-800 hover:shadow-xl hover:shadow-navy-700/30;
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full bg-emerald-500 px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-emerald-600 hover:shadow-xl hover:shadow-emerald-500/30;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full border-2 border-navy-700 px-8 py-3.5 text-sm font-semibold text-navy-700 transition-all duration-300 hover:bg-navy-700 hover:text-white;
+  }
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-full border-2 border-white/60 px-8 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:border-white;
+  }
+
+  /* Section tags */
+  .eyebrow-tag {
+    @apply inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-widest2;
+  }
+  .eyebrow-light {
+    @apply eyebrow-tag border-emerald-200 bg-emerald-50 text-emerald-600;
+  }
+  .eyebrow-dark {
+    @apply eyebrow-tag border-emerald-500/30 bg-emerald-500/10 text-emerald-400;
+  }
+  .eyebrow-white {
+    @apply eyebrow-tag border-white/30 bg-white/10 text-white;
+  }
+}
+
+@layer utilities {
+  .text-balance   { text-wrap: balance; }
+  .perspective-1000 { perspective: 1000px; }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* ── Background Patterns ──────────────────────────────── */
+.bg-dots {
+  background-image: radial-gradient(circle, rgba(11,45,91,0.08) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(11,45,91,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11,45,91,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.bg-mesh-hero {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(at 15% 25%, rgba(46,139,87,0.1)  0px, transparent 55%),
+    radial-gradient(at 85% 10%, rgba(11,45,91,0.08)  0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(46,139,87,0.06) 0px, transparent 50%),
+    radial-gradient(at 5%  90%, rgba(11,45,91,0.05)  0px, transparent 40%);
+}
+
+/* ── Energy Line ──────────────────────────────────────── */
+.energy-line {
+  background: linear-gradient(90deg, transparent 0%, #2e8b57 20%, #0b2d5b 50%, #2e8b57 80%, transparent 100%);
+  background-size: 200% 100%;
+  animation: energyFlow 3s linear infinite;
+}
+
+/* ── Shimmer text ─────────────────────────────────────── */
+.shimmer-text {
+  background: linear-gradient(90deg, #0b2d5b 0%, #2e8b57 40%, #0b2d5b 80%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3.5s linear infinite;
+}
+
+/* ── Splash screen ────────────────────────────────────── */
+.splash-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  animation: particleFloat 4s ease-in-out infinite;
+}
+
+/* ── Gradient borders ─────────────────────────────────── */
+.gradient-border {
+  position: relative;
+  background: #ffffff;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #0b2d5b, #2e8b57);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── Divider line ─────────────────────────────────────── */
+.divider-fade {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e9ecef 30%, #e9ecef 70%, transparent);
+}
+
+/* ── Vertical line for timelines ──────────────────────── */
+.timeline-line {
+  background: linear-gradient(180deg, #2e8b57 0%, #0b2d5b 50%, #2e8b57 100%);
+}
