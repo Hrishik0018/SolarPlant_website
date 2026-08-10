@@ -52,7 +52,8 @@ export default function Footer() {
             <ul className="mt-5 space-y-4">
               <li className="flex items-start gap-3 text-sm text-white/60">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
-                <span>Anandion Global Private Limited, Uttar Pradesh, India</span>
+                <span>Registered Office: 2138 Osimo, Mahagun Moderne, Sector 78, Noida 201306,Uttar Pradesh, India
+Work Office: 1004 Bhutani City Centre, Sector 32 Noida 201301, Uttar Pradesh, India</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-white/60">
                 <Mail className="h-4 w-4 flex-shrink-0 text-emerald-400" />

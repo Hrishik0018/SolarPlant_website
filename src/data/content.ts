@@ -1165,12 +1165,12 @@ export interface MediaItem {
 }
 
 export const mediaItems: MediaItem[] = [
-  { date: 'Dec 12, 2025', title: 'Anandion Global Announces Integrated Clean Energy Platform',  category: 'Press Release',  excerpt: 'Company launches seven business verticals spanning renewable energy, carbon markets, hydrogen, EV infrastructure and climate finance.' },
-  { date: 'Nov 28, 2025', title: 'Green Hydrogen Initiative Breaks Ground',                     category: 'Press Release',  excerpt: 'Anandion Hydrogen begins development of utility-scale green hydrogen production facilities.' },
-  { date: 'Nov 15, 2025', title: 'Anandion Global Commits to Net Zero',                          category: 'Sustainability', excerpt: 'Company pledges to integrate ESG principles into every strategic decision and investment.' },
-  { date: 'Oct 30, 2025', title: 'Strategic Partnership Formed with Leading Technology Provider', category: 'Partnership',    excerpt: 'Collaboration aims to accelerate innovation across renewable energy and smart infrastructure.' },
-  { date: 'Oct 12, 2025', title: 'EV Charging Network Expansion Announced',                      category: 'Press Release',  excerpt: 'Anandion EV Infrastructure unveils plans for highway corridor fast charging networks.' },
-  { date: 'Sep 20, 2025', title: 'Climate Capital Mobilizes Investment for Sustainable Infrastructure', category: 'Investment', excerpt: 'Anandion Climate Capital announces new investment focus on climate technologies and sustainable infrastructure.' },
+  { date: '', title: 'Anandion Global Announces Integrated Clean Energy Platform',  category: 'Press Release',  excerpt: 'Company launches seven business verticals spanning renewable energy, carbon markets, hydrogen, EV infrastructure and climate finance.' },
+  { date: '', title: 'Green Hydrogen Initiative Breaks Ground',                     category: 'Press Release',  excerpt: 'Anandion Hydrogen begins development of utility-scale green hydrogen production facilities.' },
+  { date: '', title: 'Anandion Global Commits to Net Zero',                          category: 'Sustainability', excerpt: 'Company pledges to integrate ESG principles into every strategic decision and investment.' },
+  { date: '', title: 'Strategic Partnership Formed with Leading Technology Provider', category: 'Partnership',    excerpt: 'Collaboration aims to accelerate innovation across renewable energy and smart infrastructure.' },
+  { date: '', title: 'EV Charging Network Expansion Announced',                      category: 'Press Release',  excerpt: 'Anandion EV Infrastructure unveils plans for highway corridor fast charging networks.' },
+  { date: '', title: 'Climate Capital Mobilizes Investment for Sustainable Infrastructure', category: 'Investment', excerpt: 'Anandion Climate Capital announces new investment focus on climate technologies and sustainable infrastructure.' },
 ];
 
 // ── Career openings ───────────────────────────────────────────────
