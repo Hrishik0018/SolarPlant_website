@@ -48,30 +48,57 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-4">
-            <h4 className="text-xs font-semibold uppercase tracking-widest2 text-emerald-400">Get in Touch</h4>
-            <ul className="mt-5 space-y-4">
-              <li className="flex items-start gap-3 text-sm text-white/60">
-                <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
-                <span>Registered Office: 2138 Osimo, Mahagun Moderne, Sector 78, Noida 201306,Uttar Pradesh, India
-Work Office: 1004 Bhutani City Centre, Sector 32 Noida 201301, Uttar Pradesh, India</span>
-              </li>
-              <li className="flex items-center gap-3 text-sm text-white/60">
-                <Mail className="h-4 w-4 flex-shrink-0 text-emerald-400" />
-                <a href="mailto:hello@anandion.com" className="transition-colors hover:text-white">hello@anandion.com</a>
-              </li>
-              <li className="flex items-center gap-3 text-sm text-white/60">
-                <Phone className="h-4 w-4 flex-shrink-0 text-emerald-400" />
-                <span>www.anandion.com</span>
-              </li>
-            </ul>
-            <Link
-              to="/contact"
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-white/80 transition-all duration-300 hover:border-emerald-400 hover:bg-emerald-500/10 hover:text-white"
-            >
-              Contact Us
-              <ArrowUpRight className="h-3.5 w-3.5" />
-            </Link>
-          </div>
+  <h4 className="text-xs font-semibold uppercase tracking-widest2 text-emerald-400">
+    Get in Touch
+  </h4>
+
+  <ul className="mt-5 space-y-4">
+    <li className="flex items-start gap-3 text-sm text-white/60">
+      <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-400" />
+
+      <div className="space-y-3">
+        <div>
+          <span className="font-medium text-white/80">Registered Office:</span>
+          <p className="mt-1">
+            2138 Osimo, Mahagun Moderne, Sector 78, Noida 201306,
+            Uttar Pradesh, India
+          </p>
+        </div>
+
+        <div>
+          <span className="font-medium text-white/80">Work Office:</span>
+          <p className="mt-1">
+            1004 Bhutani City Centre, Sector 32, Noida 201301,
+            Uttar Pradesh, India
+          </p>
+        </div>
+      </div>
+    </li>
+
+    <li className="flex items-center gap-3 text-sm text-white/60">
+      <Mail className="h-4 w-4 flex-shrink-0 text-emerald-400" />
+      <a
+        href="mailto:hello@anandion.com"
+        className="transition-colors hover:text-white"
+      >
+        hello@anandion.com
+      </a>
+    </li>
+
+    <li className="flex items-center gap-3 text-sm text-white/60">
+      <Phone className="h-4 w-4 flex-shrink-0 text-emerald-400" />
+      <span>www.anandion.com</span>
+    </li>
+  </ul>
+
+  <Link
+    to="/contact"
+    className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-white/80 transition-all duration-300 hover:border-emerald-400 hover:bg-emerald-500/10 hover:text-white"
+  >
+    Contact Us
+    <ArrowUpRight className="h-3.5 w-3.5" />
+  </Link>
+</div>
         </div>
 
         {/* Bottom bar */}
